@@ -1,10 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*@import url('https://raw.githubusercontent.com/brandonmcconnell/typed.css/refs/heads/master/typed.scss');*/
+@font-face {
+    font-family: 'Silk Flower';
+    src: url('./assets/fonts/SilkFlowerDemo-Regular.woff2') format('woff2'),
+         url('./assets/fonts/SilkFlowerDemo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+:root {
+    --jacarta: #3A345B;
+    --pink: #D183A9;
+}
+
+@keyframes moveDown{
+    100% {
+        transform: translateY(calc(100vh - 55vh));
+    }
+}
+
+body {
+    background-color: var(--jacarta);
+}
+
+#progress-bar {
+    position: fixed;
+    width: 0%;
+    height: 1vh;
+    border-radius: 10px;
+    background-color: var(--pink);
+}
+
+#hello {
+    margin: 0;
+    margin-left: 2vw;
+    font-size: 100px;
+    line-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    animation: moveDown 7s ease-in-out;
+    animation-timeline: scroll(block root);
+    animation-range: 0vh 20vh;
+    animation-fill-mode: forwards;
+}
+
+#haya {
+    margin: 0;
+    font-size: 100px;
+    /*@include typed("I'm Haya")*/
+}
 
 h1, h2, h3, p {
-    font-family: "Montserrat", serif;
+    font-family: "Silk Flower", monospace;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    color: var(--pink)
 }
 
 #header {
