@@ -1,109 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/*@import url('https://raw.githubusercontent.com/brandonmcconnell/typed.css/refs/heads/master/typed.scss');*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
-    font-family: 'Silk Flower';
-    src: url('./assets/fonts/SilkFlowerDemo-Regular.woff2') format('woff2'),
-         url('./assets/fonts/SilkFlowerDemo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
+  font-family: "Silk Flower";
+  src: url("./assets/fonts/SilkFlowerDemo-Regular.woff2") format("woff2"), url("./assets/fonts/SilkFlowerDemo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-    --jacarta: #3A345B;
-    --pink: #D183A9;
+  --jacarta: #3A345B;
+  --pink: #D183A9;
 }
 
-@keyframes moveDown{
-    100% {
-        transform: translateY(calc(100vh - 55vh));
-    }
+@keyframes moveDown {
+  100% {
+    transform: translateY(45vh);
+  }
 }
-
+@keyframes spaceOut {
+  100% {
+    letter-spacing: 10px;
+  }
+}
 body {
-    background-color: var(--jacarta);
+  background-color: var(--jacarta);
 }
 
 #progress-bar {
-    position: fixed;
-    width: 0%;
-    height: 1vh;
-    border-radius: 10px;
-    background-color: var(--pink);
+  position: fixed;
+  width: 0%;
+  height: 1vh;
+  border-radius: 10px;
+  background-color: var(--pink);
 }
 
 #hello {
-    margin: 0;
-    margin-left: 2vw;
-    font-size: 100px;
-    line-height: 100vh;
-    width: 100vw;
-    height: 100vh;
-    animation: moveDown 7s ease-in-out;
-    animation-timeline: scroll(block root);
-    animation-range: 0vh 20vh;
-    animation-fill-mode: forwards;
+  margin: 0;
+  margin-left: 2vw;
+  font-size: 100px;
+  line-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  animation: moveDown 7s ease-in-out;
+  animation-timeline: scroll(block root);
+  animation-range: 0vh 20vh;
+  animation-fill-mode: forwards;
 }
 
 #haya {
-    margin: 0;
-    font-size: 100px;
-    /*@include typed("I'm Haya")*/
+  margin: 0;
+  font-size: 100px;
+}
+#haya::before {
+  content: "​";
+  content: "​"/"I'm Haya";
+  alt: "I'm Haya";
+  white-space: break-spaces;
+  will-change: content;
+  animation: typed-0 11.1s linear 1s 1 forwards, typed-0-final 2s linear 12.1s 1 forwards;
+}
+@keyframes typed-0-final {
+  0%, 12.5% {
+    content: "​I";
+    content: "​I"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  12.501%, 25% {
+    content: "​I'";
+    content: "​I'"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  25.001%, 37.5% {
+    content: "​I'm";
+    content: "​I'm"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  37.501%, 50% {
+    content: "​I'm ";
+    content: "​I'm "/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  50.001%, 62.5% {
+    content: "​I'm H";
+    content: "​I'm H"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  62.501%, 75% {
+    content: "​I'm Ha";
+    content: "​I'm Ha"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  75.001%, 87.5% {
+    content: "​I'm Hay";
+    content: "​I'm Hay"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  87.501%, 100% {
+    content: "​I'm Haya";
+    content: "​I'm Haya"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+}
+#haya::after {
+  content: "​";
+  position: relative;
+  display: inline-block;
+  padding-right: 0.1ch;
+  border-right: 10px solid currentColor;
+  white-space: nowrap;
+  animation: typed-0-caret 0.75s linear 1s infinite forwards;
+}
+@keyframes typed-0 {
+  0%, 2.2512522523% {
+    content: "​I";
+    content: "​I"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  2.2522522523%, 4.5035045045% {
+    content: "​I'";
+    content: "​I'"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  4.5045045045%, 6.7557567568% {
+    content: "​I'm";
+    content: "​I'm"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  6.7567567568%, 9.008009009% {
+    content: "​I'm ";
+    content: "​I'm "/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  9.009009009%, 11.2602612613% {
+    content: "​I'm H";
+    content: "​I'm H"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  11.2612612613%, 13.5125135135% {
+    content: "​I'm Ha";
+    content: "​I'm Ha"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  13.5135135135%, 15.7647657658% {
+    content: "​I'm Hay";
+    content: "​I'm Hay"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  15.7657657658%, 64.8638648649% {
+    content: "​I'm Haya";
+    content: "​I'm Haya"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  64.8648648649%, 66.6656666667% {
+    content: "​I'm Hay";
+    content: "​I'm Hay"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  66.6666666667%, 68.4674684685% {
+    content: "​I'm Ha";
+    content: "​I'm Ha"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  68.4684684685%, 70.2692702703% {
+    content: "​I'm H";
+    content: "​I'm H"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  70.2702702703%, 72.0710720721% {
+    content: "​I'm ";
+    content: "​I'm "/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  72.0720720721%, 73.8728738739% {
+    content: "​I'm";
+    content: "​I'm"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  73.8738738739%, 75.6746756757% {
+    content: "​I'";
+    content: "​I'"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  75.6756756757%, 77.4764774775% {
+    content: "​I";
+    content: "​I"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+  77.4774774775%, 100% {
+    content: "​";
+    content: "​"/"I'm Haya";
+    alt: "I'm Haya";
+  }
+}
+@keyframes typed-0-caret {
+  75% {
+    border-color: transparent;
+  }
+}
+
+hr {
+  border-top: 1vw dotted var(--pink);
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
 }
 
 h1, h2, h3, p {
-    font-family: "Silk Flower", monospace;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: var(--pink)
+  font-family: "Silk Flower", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--pink);
+}
+
+.general-text {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
 }
 
 #header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    font-size: 50px;
-    margin: 0;
-    transition: letter-spacing 2s;
-    letter-spacing: normal;
-    margin-top: 30px;
+  font-size: 50px;
+  margin: 0;
+  animation: spaceOut 2s ease-in;
+  animation-timeline: scroll(block root);
+  animation-fill-mode: forwards;
+  letter-spacing: normal;
+  margin-top: 1vh;
+}
+
+#about-me h1 {
+  animation-range: 25vh 35vh;
+}
+
+#projects h1 {
+  animation-range: 60vh 70vh;
+}
+
+#skills h1 {
+  animation-range: 75vh 85vh;
+}
+
+#blog h1 {
+  animation-range: 85vh 90vh;
+}
+
+#contact h1 {
+  animation-range: 95vh 100vh;
 }
 
 h2 {
-    font-size: 25px;
-    letter-spacing: 5px;
+  font-size: 25px;
+  letter-spacing: 5px;
 }
 
 #welcome-text {
-    margin-top: 40px;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    width: 100%;
-    height: 40%;
-    padding: 40px;
-    text-align: center;
+  margin-top: 40px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 40%;
+  padding: 40px;
+  text-align: center;
 }
 
 h3 {
-    text-align: center;
-    margin-top: 90px;
-    font-size: 45px;
+  text-align: center;
+  margin-top: 90px;
+  font-size: 45px;
 }
 
 table {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 td {
-    width: 30%;
-    height: 9%;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 100px;
-    margin: 20px;
+  width: 30%;
+  height: 9%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 100px;
+  margin: 20px;
 }
+
+/*# sourceMappingURL=styles.css.map */
