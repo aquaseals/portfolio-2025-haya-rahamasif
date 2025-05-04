@@ -23,19 +23,26 @@
 }
 body {
   background-color: var(--jacarta);
+  width: 100%;
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #progress-bar {
+  margin-top: 1vh;
   position: fixed;
-  width: 0%;
+  width: 0vw;
   height: 1vh;
   border-radius: 10px;
   background-color: var(--pink);
+  max-width: 70vw;
 }
 
 #hello {
   margin: 0;
-  margin-left: 2vw;
   font-size: 100px;
   line-height: 100vh;
   width: 100vw;
@@ -198,6 +205,7 @@ body {
 }
 
 hr {
+  width: 100%;
   border-top: 1vw dotted var(--pink);
   border-bottom: none;
   border-right: none;
@@ -227,31 +235,9 @@ h1, h2, h3, p {
 h1 {
   font-size: 50px;
   margin: 0;
-  animation: spaceOut 2s ease-in;
   animation-timeline: scroll(block root);
-  animation-fill-mode: forwards;
   letter-spacing: normal;
   margin-top: 1vh;
-}
-
-#about-me h1 {
-  animation-range: 25vh 35vh;
-}
-
-#projects h1 {
-  animation-range: 60vh 70vh;
-}
-
-#skills h1 {
-  animation-range: 75vh 85vh;
-}
-
-#blog h1 {
-  animation-range: 85vh 90vh;
-}
-
-#contact h1 {
-  animation-range: 95vh 100vh;
 }
 
 h2 {
