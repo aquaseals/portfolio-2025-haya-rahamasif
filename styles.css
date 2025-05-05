@@ -21,8 +21,22 @@
     letter-spacing: 10px;
   }
 }
+@keyframes appear {
+  100% {
+    opacity: 100%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--jacarta);
+  margin: 0;
+  max-width: 100vw;
+}
+
+.page {
   width: 100%;
   max-width: 70vw;
   margin: 0 auto;
@@ -31,19 +45,83 @@ body {
   align-items: flex-start;
 }
 
+.section {
+  margin-top: 2vh;
+}
+
+.image-and-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 1vh;
+}
+
+.image-and-text img {
+  width: 25vw;
+  padding-right: 5vw;
+  border-radius: 5vw;
+}
+
+#top-bar {
+  z-index: 100000;
+  position: fixed;
+  background-color: var(--pink);
+  width: 100vw;
+  padding-left: 0;
+  margin: 0;
+  opacity: 0%;
+  animation: appear 10s ease-in-out;
+  animation-timeline: scroll(block root);
+  animation-range: 20vh 40vh;
+  animation-fill-mode: forwards;
+}
+
+#nav {
+  margin: 0;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+#nav a {
+  font-family: "Silk Flower";
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vw;
+}
+
+#nav a:hover {
+  text-shadow: 1px 1px 1vw var(--jacarta);
+}
+
+.nav-item {
+  color: var(--jacarta);
+}
+
+#progress-bar-container {
+  background-color: var(--pink);
+  height: 2vh;
+  width: 100vw;
+}
+
 #progress-bar {
   margin-top: 1vh;
   position: fixed;
   width: 0vw;
+  margin: auto;
   height: 1vh;
   border-radius: 10px;
-  background-color: var(--pink);
-  max-width: 70vw;
+  background-color: var(--jacarta);
+  max-width: 100vw;
 }
 
 #hello {
   margin: 0;
-  font-size: 100px;
+  font-size: 6vw;
   line-height: 100vh;
   width: 100vw;
   height: 100vh;
@@ -55,7 +133,7 @@ body {
 
 #haya {
   margin: 0;
-  font-size: 100px;
+  font-size: 6vw;
 }
 #haya::before {
   content: "​";
@@ -112,7 +190,7 @@ body {
   position: relative;
   display: inline-block;
   padding-right: 0.1ch;
-  border-right: 10px solid currentColor;
+  border-right: 1vw solid currentColor;
   white-space: nowrap;
   animation: typed-0-caret 0.75s linear 1s infinite forwards;
 }
@@ -224,6 +302,8 @@ h1, h2, h3, p {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 1.5vw;
+  text-align: justify;
+  margin: 0;
 }
 
 #header {
@@ -233,47 +313,11 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3vw;
   margin: 0;
   animation-timeline: scroll(block root);
   letter-spacing: normal;
   margin-top: 1vh;
-}
-
-h2 {
-  font-size: 25px;
-  letter-spacing: 5px;
-}
-
-#welcome-text {
-  margin-top: 40px;
-  font-weight: 500;
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 40%;
-  padding: 40px;
-  text-align: center;
-}
-
-h3 {
-  text-align: center;
-  margin-top: 90px;
-  font-size: 45px;
-}
-
-table {
-  display: flex;
-  justify-content: center;
-}
-
-td {
-  width: 30%;
-  height: 9%;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 100px;
-  margin: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
