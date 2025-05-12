@@ -34,6 +34,11 @@ body {
   background-color: var(--jacarta);
   margin: 0;
   max-width: 100vw;
+  cursor: url("./assets/images/cursor.cur") 0 0, auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .page {
@@ -47,6 +52,7 @@ body {
 
 .section {
   margin-top: 2vh;
+  width: 100%;
 }
 
 .image-and-text {
@@ -318,6 +324,280 @@ h1 {
   animation-timeline: scroll(block root);
   letter-spacing: normal;
   margin-top: 1vh;
+}
+
+.recent-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+.recent-projects div img {
+  max-width: 30vw;
+  border-radius: 1vw;
+}
+
+.recent-projects div p {
+  font-size: 2vw;
+  margin-top: 0.5vh;
+}
+
+.see-all {
+  margin-top: 2vh;
+}
+
+.see-all a {
+  color: var(--pink);
+}
+
+/* PROJECTS PAGE */
+#all-projects {
+  font-size: 6vw;
+}
+#all-projects::before {
+  content: "​";
+  content: "​"/"All Projects";
+  alt: "All Projects";
+  white-space: break-spaces;
+  will-change: content;
+  animation: typed-1 12.9s linear 1s 1 forwards, typed-1-final 3s linear 13.9s 1 forwards;
+}
+@keyframes typed-1-final {
+  0%, 8.3333333333% {
+    content: "​A";
+    content: "​A"/"All Projects";
+    alt: "All Projects";
+  }
+  8.3343333333%, 16.6666666667% {
+    content: "​Al";
+    content: "​Al"/"All Projects";
+    alt: "All Projects";
+  }
+  16.6676666667%, 25% {
+    content: "​All";
+    content: "​All"/"All Projects";
+    alt: "All Projects";
+  }
+  25.001%, 33.3333333333% {
+    content: "​All ";
+    content: "​All "/"All Projects";
+    alt: "All Projects";
+  }
+  33.3343333333%, 41.6666666667% {
+    content: "​All P";
+    content: "​All P"/"All Projects";
+    alt: "All Projects";
+  }
+  41.6676666667%, 50% {
+    content: "​All Pr";
+    content: "​All Pr"/"All Projects";
+    alt: "All Projects";
+  }
+  50.001%, 58.3333333333% {
+    content: "​All Pro";
+    content: "​All Pro"/"All Projects";
+    alt: "All Projects";
+  }
+  58.3343333333%, 66.6666666667% {
+    content: "​All Proj";
+    content: "​All Proj"/"All Projects";
+    alt: "All Projects";
+  }
+  66.6676666667%, 75% {
+    content: "​All Proje";
+    content: "​All Proje"/"All Projects";
+    alt: "All Projects";
+  }
+  75.001%, 83.3333333333% {
+    content: "​All Projec";
+    content: "​All Projec"/"All Projects";
+    alt: "All Projects";
+  }
+  83.3343333333%, 91.6666666667% {
+    content: "​All Project";
+    content: "​All Project"/"All Projects";
+    alt: "All Projects";
+  }
+  91.6676666667%, 100% {
+    content: "​All Projects";
+    content: "​All Projects"/"All Projects";
+    alt: "All Projects";
+  }
+}
+#all-projects::after {
+  content: "​";
+  position: relative;
+  display: inline-block;
+  padding-right: 0.1ch;
+  border-right: 1vw solid currentColor;
+  white-space: nowrap;
+  animation: typed-1-caret 0.75s linear 1s infinite forwards;
+}
+@keyframes typed-1 {
+  0%, 1.9369844961% {
+    content: "​A";
+    content: "​A"/"All Projects";
+    alt: "All Projects";
+  }
+  1.9379844961%, 3.8749689922% {
+    content: "​Al";
+    content: "​Al"/"All Projects";
+    alt: "All Projects";
+  }
+  3.8759689922%, 5.8129534884% {
+    content: "​All";
+    content: "​All"/"All Projects";
+    alt: "All Projects";
+  }
+  5.8139534884%, 7.7509379845% {
+    content: "​All ";
+    content: "​All "/"All Projects";
+    alt: "All Projects";
+  }
+  7.7519379845%, 9.6889224806% {
+    content: "​All P";
+    content: "​All P"/"All Projects";
+    alt: "All Projects";
+  }
+  9.6899224806%, 11.6269069767% {
+    content: "​All Pr";
+    content: "​All Pr"/"All Projects";
+    alt: "All Projects";
+  }
+  11.6279069767%, 13.5648914729% {
+    content: "​All Pro";
+    content: "​All Pro"/"All Projects";
+    alt: "All Projects";
+  }
+  13.5658914729%, 15.502875969% {
+    content: "​All Proj";
+    content: "​All Proj"/"All Projects";
+    alt: "All Projects";
+  }
+  15.503875969%, 17.4408604651% {
+    content: "​All Proje";
+    content: "​All Proje"/"All Projects";
+    alt: "All Projects";
+  }
+  17.4418604651%, 19.3788449612% {
+    content: "​All Projec";
+    content: "​All Projec"/"All Projects";
+    alt: "All Projects";
+  }
+  19.3798449612%, 21.3168294574% {
+    content: "​All Project";
+    content: "​All Project"/"All Projects";
+    alt: "All Projects";
+  }
+  21.3178294574%, 63.5648914729% {
+    content: "​All Projects";
+    content: "​All Projects"/"All Projects";
+    alt: "All Projects";
+  }
+  63.5658914729%, 65.1152790698% {
+    content: "​All Project";
+    content: "​All Project"/"All Projects";
+    alt: "All Projects";
+  }
+  65.1162790698%, 66.6656666667% {
+    content: "​All Projec";
+    content: "​All Projec"/"All Projects";
+    alt: "All Projects";
+  }
+  66.6666666667%, 68.2160542636% {
+    content: "​All Proje";
+    content: "​All Proje"/"All Projects";
+    alt: "All Projects";
+  }
+  68.2170542636%, 69.7664418605% {
+    content: "​All Proj";
+    content: "​All Proj"/"All Projects";
+    alt: "All Projects";
+  }
+  69.7674418605%, 71.3168294574% {
+    content: "​All Pro";
+    content: "​All Pro"/"All Projects";
+    alt: "All Projects";
+  }
+  71.3178294574%, 72.8672170543% {
+    content: "​All Pr";
+    content: "​All Pr"/"All Projects";
+    alt: "All Projects";
+  }
+  72.8682170543%, 74.4176046512% {
+    content: "​All P";
+    content: "​All P"/"All Projects";
+    alt: "All Projects";
+  }
+  74.4186046512%, 75.9679922481% {
+    content: "​All ";
+    content: "​All "/"All Projects";
+    alt: "All Projects";
+  }
+  75.9689922481%, 77.518379845% {
+    content: "​All";
+    content: "​All"/"All Projects";
+    alt: "All Projects";
+  }
+  77.519379845%, 79.0687674419% {
+    content: "​Al";
+    content: "​Al"/"All Projects";
+    alt: "All Projects";
+  }
+  79.0697674419%, 80.6191550388% {
+    content: "​A";
+    content: "​A"/"All Projects";
+    alt: "All Projects";
+  }
+  80.6201550388%, 100% {
+    content: "​";
+    content: "​"/"All Projects";
+    alt: "All Projects";
+  }
+}
+@keyframes typed-1-caret {
+  75% {
+    border-color: transparent;
+  }
+}
+
+.project {
+  width: 100%;
+  margin-top: 3vh;
+}
+
+.project a {
+  font-family: "Silk Flower";
+  color: var(--pink);
+  font-size: 2vw;
+}
+
+.project div {
+  display: flex;
+  flex-direction: row;
+}
+
+.project p {
+  font-size: 1.25vw;
+  width: 50%;
+}
+
+.project hr {
+  border-top: 0.5vw dotted var(--pink);
+}
+
+.project-date {
+  width: 50%;
+  text-align: right;
+}
+
+table {
+  width: 60vw;
+}
+
+td img {
+  width: 10vw;
 }
 
 /*# sourceMappingURL=styles.css.map */

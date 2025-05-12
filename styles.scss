@@ -39,6 +39,12 @@ body {
     background-color: var(--jacarta);
     margin: 0;
     max-width: 100vw;
+    cursor: url("./assets/images/cursor.cur") 0 0, // not working 
+    auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 .page {
@@ -52,6 +58,7 @@ body {
 
 .section {
     margin-top: 2vh;
+    width: 100%;
 }
 
 .image-and-text {
@@ -183,4 +190,81 @@ h1 {
     animation-timeline: scroll(block root);
     letter-spacing: normal;
     margin-top: 1vh;
+}
+
+.recent-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.recent-projects div img {
+    max-width: 30vw;
+    border-radius: 1vw;
+}
+
+.recent-projects div p {
+    font-size: 2vw;
+    margin-top: 0.5vh;
+}
+
+.see-all {
+    margin-top: 2vh;
+}
+
+.see-all a {
+    color: var(--pink);
+
+}
+
+/* PROJECTS PAGE */
+#all-projects {
+    font-size: 6vw;
+    @include typed(
+        "All Projects", 
+        0.4,
+        (caret-width: 1vw,
+        iterations: 1) 
+        )
+}
+
+.project {
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.project a {
+    font-family: "Silk Flower";
+    color: var(--pink);
+    font-size: 2vw;
+}
+
+.project div {
+    display: flex;
+    flex-direction: row;
+}
+
+.project p {
+    font-size: 1.25vw;
+    width: 50%;
+}
+
+.project hr {
+    border-top: 0.5vw dotted var(--pink);
+}
+
+.project-date {
+    width: 50%;
+    text-align: right;
+}
+
+// SKILLS SECTION
+
+table {
+    width: 60vw;
+}
+
+td img {
+    width:10vw;
 }
