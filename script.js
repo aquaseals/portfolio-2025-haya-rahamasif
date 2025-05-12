@@ -35,3 +35,45 @@ document.addEventListener("scroll", function() {
         contact.querySelector('h1').style.animationFillMode = "forwards"
     }
 })
+
+function switchMode() {
+    let count = 0
+    /*console.log("switch theme")
+    console.log(document.getElementsByTagName("body")[0].style.backgroundColor)
+    document.getElementsByTagName("body")[0].style.backgroundColor = "var(--pink)"
+    document.getElementById("nav").style.backgroundColor = "var(--jacarta)"
+    let navItems = document.getElementsByTagName('a')
+for(let i=0;i<navItems.length;i++) {
+        console.log(navItems[i].style.backgroundColor)
+        navItems[i].style.color = 'var(--pink)'
+    }
+    let allElements = document.getElementsByTagName("*")
+    for (let i=0;i<allElements.length;i++) {
+        try {
+            if (allElements[i].style.color = "var(--pink") {
+                allElements[i].style.color = "var(--jacarta)"
+            } else {
+                allElements[i].style.color = "var(--pink)"
+            }
+        }
+        catch {
+            console.log("unable to change color")
+        }
+            
+    }*/
+   console.log('hi')
+   let allElements = document.getElementsByTagName("*")
+    for (let i=0;i<allElements.length;i++) {
+        if (count == 1) {
+            allElements[i].classList.toggle('darkmode')
+            document.body.style.backgroundColor = 'var(--jacarta)'
+            count = 0
+        } else if (count == 0) {
+            allElements[i].classList.toggle('lightmode')
+            document.body.style.backgroundColor = 'var(--pink)'
+            count = 1
+        }
+    }
+}
+
+document.getElementById('theme').addEventListener('click', switchMode)

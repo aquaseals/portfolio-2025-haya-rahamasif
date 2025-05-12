@@ -37,10 +37,21 @@ html {
 
 body {
     background-color: var(--jacarta);
+    color: var(--pink);
     margin: 0;
     max-width: 100vw;
     cursor: url("./assets/images/cursor.cur") 0 0, // not working 
     auto;
+}
+
+.lightmode {
+    color: var(--jacarta);
+    background-color: var(--pink);
+}
+
+.darkmode {
+    color: var(--pink);
+    background-color: var(--jacarta);
 }
 
 a {
@@ -133,6 +144,7 @@ a {
 
 #hello {
     margin: 0;
+    z-index: 0;
     font-size: 6vw;
     line-height: 100vh;
     width: 100vw;
