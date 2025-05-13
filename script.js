@@ -1,3 +1,4 @@
+let mode = 0
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
@@ -37,43 +38,31 @@ document.addEventListener("scroll", function() {
 })
 
 function switchMode() {
-    let count = 0
-    /*console.log("switch theme")
-    console.log(document.getElementsByTagName("body")[0].style.backgroundColor)
-    document.getElementsByTagName("body")[0].style.backgroundColor = "var(--pink)"
-    document.getElementById("nav").style.backgroundColor = "var(--jacarta)"
-    let navItems = document.getElementsByTagName('a')
-for(let i=0;i<navItems.length;i++) {
-        console.log(navItems[i].style.backgroundColor)
-        navItems[i].style.color = 'var(--pink)'
-    }
-    let allElements = document.getElementsByTagName("*")
-    for (let i=0;i<allElements.length;i++) {
-        try {
-            if (allElements[i].style.color = "var(--pink") {
-                allElements[i].style.color = "var(--jacarta)"
-            } else {
-                allElements[i].style.color = "var(--pink)"
-            }
-        }
-        catch {
-            console.log("unable to change color")
-        }
-            
-    }*/
-   console.log('hi')
+   if (mode == 0) {
+      document.getElementById("theme").src = "./assets/images/moon.png"
+      document.getElementsByTagName("hr")[0].style.borderColor = "0.5vw dotted var(--pink)"
+      mode = 1
+   } else if (mode == 1) {
+        document.getElementById("theme").src = "./assets/images/sun.png"
+        document.getElementsByTagName("hr")[0].style.borderColor = "0.5vw dotted var(--jacarta)"
+        mode = 0
+   }
    let allElements = document.getElementsByTagName("*")
     for (let i=0;i<allElements.length;i++) {
-        if (count == 1) {
-            allElements[i].classList.toggle('darkmode')
-            document.body.style.backgroundColor = 'var(--jacarta)'
-            count = 0
-        } else if (count == 0) {
-            allElements[i].classList.toggle('lightmode')
-            document.body.style.backgroundColor = 'var(--pink)'
-            count = 1
+        color = window.getComputedStyle(allElements[i]).getPropertyValue("color")
+        bgColor = window.getComputedStyle(allElements[i]).getPropertyValue("background-color")
+        if (color == 'rgb(209, 131, 169)') {
+            allElements[i].style.color = 'rgb(58, 52, 91)'
+        } else if (color == 'rgb(58, 52, 91)') {
+            allElements[i].style.color = 'rgb(209, 131, 169)'
+        }
+        if (bgColor == 'rgb(209, 131, 169)') {
+            allElements[i].style.backgroundColor = 'rgb(58, 52, 91)'
+        } else if (bgColor == 'rgb(58, 52, 91)') {
+            allElements[i].style.backgroundColor = 'rgb(209, 131, 169)'
         }
     }
 }
 
 document.getElementById('theme').addEventListener('click', switchMode)
+
