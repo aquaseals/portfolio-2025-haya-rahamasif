@@ -7,9 +7,9 @@
   font-style: normal;
 }
 :root {
-  --jacarta: #3A345B;
-  --pink: #D183A9;
-  --light-pink: #F3C8DD;
+  --jacarta: #3a345b;
+  --pink: #d183a9;
+  --light-pink: #f3c8dd;
 }
 
 @keyframes moveDown {
@@ -81,7 +81,7 @@ a {
 
 .image-and-text img {
   width: 25vw;
-  padding-right: 5vw;
+  margin-right: 5vw;
   border-radius: 5vw;
 }
 
@@ -314,7 +314,10 @@ hr {
   border-left: none;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   font-family: "Silk Flower", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -344,33 +347,9 @@ h1 {
   margin-top: 1vh;
 }
 
-.recent-projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 2vh;
-}
-
-.recent-projects div img {
-  max-width: 30vw;
-  border-radius: 1vw;
-}
-
-.recent-projects div p {
-  font-size: 2vw;
-  margin-top: 0.5vh;
-}
-
-.see-all {
-  margin-top: 2vh;
-}
-
-.see-all a {
-  color: var(--pink);
-}
-
-/* PROJECTS PAGE */
+/* ALL PROJECTS SECTION */
 #all-projects {
+  margin-bottom: 1vh;
   font-size: 6vw;
 }
 #all-projects::before {
@@ -580,32 +559,166 @@ h1 {
   }
 }
 
-.project {
+.recent-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+  width: 70vw;
+}
+
+.recent-projects div img {
+  max-width: 30vw;
+  border-radius: 1vw;
+}
+
+.recent-projects div p {
+  font-size: 2vw;
+  margin-top: 0.5vh;
+}
+
+.see-all {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.see-all a {
+  color: var(--pink);
+}
+
+/* BLOG SUMMARY PAGE */
+#all-blogs {
+  margin-bottom: 1vh;
+  font-size: 6vw;
+}
+#all-blogs::before {
+  content: "​";
+  content: "​"/"Posts";
+  alt: "Posts";
+  white-space: break-spaces;
+  will-change: content;
+  animation: typed-2 9.75s linear 1s 1 forwards, typed-2-final 1.25s linear 10.75s 1 forwards;
+}
+@keyframes typed-2-final {
+  0%, 20% {
+    content: "​P";
+    content: "​P"/"Posts";
+    alt: "Posts";
+  }
+  20.001%, 40% {
+    content: "​Po";
+    content: "​Po"/"Posts";
+    alt: "Posts";
+  }
+  40.001%, 60% {
+    content: "​Pos";
+    content: "​Pos"/"Posts";
+    alt: "Posts";
+  }
+  60.001%, 80% {
+    content: "​Post";
+    content: "​Post"/"Posts";
+    alt: "Posts";
+  }
+  80.001%, 100% {
+    content: "​Posts";
+    content: "​Posts"/"Posts";
+    alt: "Posts";
+  }
+}
+#all-blogs::after {
+  content: "​";
+  position: relative;
+  display: inline-block;
+  padding-right: 0.1ch;
+  border-right: 1vw solid currentColor;
+  white-space: nowrap;
+  animation: typed-2-caret 0.75s linear 1s infinite forwards;
+}
+@keyframes typed-2 {
+  0%, 2.5631025641% {
+    content: "​P";
+    content: "​P"/"Posts";
+    alt: "Posts";
+  }
+  2.5641025641%, 5.1272051282% {
+    content: "​Po";
+    content: "​Po"/"Posts";
+    alt: "Posts";
+  }
+  5.1282051282%, 7.6913076923% {
+    content: "​Pos";
+    content: "​Pos"/"Posts";
+    alt: "Posts";
+  }
+  7.6923076923%, 10.2554102564% {
+    content: "​Post";
+    content: "​Post"/"Posts";
+    alt: "Posts";
+  }
+  10.2564102564%, 66.1528461538% {
+    content: "​Posts";
+    content: "​Posts"/"Posts";
+    alt: "Posts";
+  }
+  66.1538461538%, 68.2041282051% {
+    content: "​Post";
+    content: "​Post"/"Posts";
+    alt: "Posts";
+  }
+  68.2051282051%, 70.2554102564% {
+    content: "​Pos";
+    content: "​Pos"/"Posts";
+    alt: "Posts";
+  }
+  70.2564102564%, 72.3066923077% {
+    content: "​Po";
+    content: "​Po"/"Posts";
+    alt: "Posts";
+  }
+  72.3076923077%, 74.357974359% {
+    content: "​P";
+    content: "​P"/"Posts";
+    alt: "Posts";
+  }
+  74.358974359%, 100% {
+    content: "​";
+    content: "​"/"Posts";
+    alt: "Posts";
+  }
+}
+@keyframes typed-2-caret {
+  75% {
+    border-color: transparent;
+  }
+}
+
+.blog-post {
   width: 100%;
   margin-top: 3vh;
 }
 
-.project a {
+.blog-post a {
   font-family: "Silk Flower";
   color: var(--pink);
   font-size: 2vw;
 }
 
-.project div {
+.blog-post div {
   display: flex;
   flex-direction: row;
 }
 
-.project p {
+.blog-post p {
   font-size: 1.25vw;
   width: 50%;
 }
 
-.project hr {
+.blog-post hr {
   border-top: 0.5vw dotted var(--pink);
 }
 
-.project-date {
+.blog-post-date {
   width: 50%;
   text-align: right;
 }
@@ -633,5 +746,13 @@ td img {
   background-color: var(--pink);
   color: var(--jacarta);
 }
+
+/*
+to do for esponsiveness
+- make theme icon smaller
+- remove page margin
+- make text a bit bigger
+- make tables in a single or double column
+*/
 
 /*# sourceMappingURL=styles.css.map */

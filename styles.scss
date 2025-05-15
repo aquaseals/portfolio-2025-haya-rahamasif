@@ -1,304 +1,336 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import './assets/typed.scss';
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./assets/typed.scss";
 @font-face {
-    font-family: 'Silk Flower';
-    src: url('./assets/fonts/SilkFlowerDemo-Regular.woff2') format('woff2'),
-         url('./assets/fonts/SilkFlowerDemo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-:root {
-    --jacarta: #3A345B;
-    --pink: #D183A9;
-    --light-pink: #F3C8DD;
+  font-family: "Silk Flower";
+  src: url("./assets/fonts/SilkFlowerDemo-Regular.woff2") format("woff2"),
+    url("./assets/fonts/SilkFlowerDemo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@keyframes moveDown{
-    100% {
-        transform: translateY(calc(100vh - 55vh));
-    }
+:root {
+  --jacarta: #3a345b;
+  --pink: #d183a9;
+  --light-pink: #f3c8dd;
+}
+
+@keyframes moveDown {
+  100% {
+    transform: translateY(calc(100vh - 55vh));
+  }
 }
 
 @keyframes spaceOut {
-    100% {
-        letter-spacing: 10px;
-    }
+  100% {
+    letter-spacing: 10px;
+  }
 }
 
 @keyframes appear {
-    100% {
-        opacity: 100%;
-    }
+  100% {
+    opacity: 100%;
+  }
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--jacarta);
-    color: var(--pink);
-    margin: 0;
-    max-width: 100vw;
-    cursor: url("./assets/images/cursor.cur") 0 0, // not working 
+  background-color: var(--jacarta);
+  color: var(--pink);
+  margin: 0;
+  max-width: 100vw;
+  cursor: url("./assets/images/cursor.cur") 0 0,
+    // not working
     auto;
 }
 
 #theme-container {
-    z-index: 10000;
-    position: fixed;
-    margin-top: 5vh;
+  z-index: 10000;
+  position: fixed;
+  margin-top: 5vh;
 }
 
 #theme {
-    width: 8vw;
+  width: 8vw;
 }
 
 #theme:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .page {
-    width: 100%; 
-    max-width: 70vw; 
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 100%;
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .section {
-    margin-top: 2vh;
-    width: 100%;
+  margin-top: 2vh;
+  width: 100%;
 }
 
 .image-and-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    margin-top: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 1vh;
 }
 
 .image-and-text img {
-    width: 25vw;
-    padding-right: 5vw;
-    border-radius: 5vw;
+  width: 25vw;
+  margin-right: 5vw;
+  border-radius: 5vw;
 }
 
 #top-bar {
-    z-index: 100000;
-    position: fixed;
-    background-color: var(--pink);
-    width: 100vw;
-    padding-left: 0;
-    margin: 0;
-    opacity: 0%;
-    animation: appear 10s ease-in-out;
-    animation-timeline: scroll(block root);
-    animation-range: 20vh 40vh;
-    animation-fill-mode: forwards;
+  z-index: 100000;
+  position: fixed;
+  background-color: var(--pink);
+  width: 100vw;
+  padding-left: 0;
+  margin: 0;
+  opacity: 0%;
+  animation: appear 10s ease-in-out;
+  animation-timeline: scroll(block root);
+  animation-range: 20vh 40vh;
+  animation-fill-mode: forwards;
 }
 
 #nav {
-    margin: 0;
-    max-width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+  margin: 0;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 #nav a {
-    font-family: 'Silk Flower';
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 2vw;
+  font-family: "Silk Flower";
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vw;
 }
 
 #nav a:hover {
-    text-shadow: 1px 1px 1vw var(--jacarta);
+  text-shadow: 1px 1px 1vw var(--jacarta);
 }
 
 .nav-item {
-    color: var(--jacarta);
+  color: var(--jacarta);
 }
 
 #progress-bar-container {
-    background-color: var(--pink);
-    height: 2vh;
-    width: 100vw;
+  background-color: var(--pink);
+  height: 2vh;
+  width: 100vw;
 }
 
 #progress-bar {
-    margin-top: 1vh;
-    position: fixed;
-    width: 0vw;
-    margin: auto;
-    height: 1vh;
-    border-radius: 10px;
-    background-color: var(--jacarta);
-    max-width: 100vw;
+  margin-top: 1vh;
+  position: fixed;
+  width: 0vw;
+  margin: auto;
+  height: 1vh;
+  border-radius: 10px;
+  background-color: var(--jacarta);
+  max-width: 100vw;
 }
 
 #hello {
-    margin: 0;
-    z-index: 0;
-    font-size: 6vw;
-    line-height: 100vh;
-    width: 100vw;
-    height: 100vh;
-    animation: moveDown 7s ease-in-out;
-    animation-timeline: scroll(block root);
-    animation-range: 0vh 20vh;
-    animation-fill-mode: forwards;
-    color: var(--pink);
+  margin: 0;
+  z-index: 0;
+  font-size: 6vw;
+  line-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  animation: moveDown 7s ease-in-out;
+  animation-timeline: scroll(block root);
+  animation-range: 0vh 20vh;
+  animation-fill-mode: forwards;
+  color: var(--pink);
 }
 
 #haya {
-    margin: 0;
-    font-size: 6vw;
-    @include typed(
-        "I'm Haya", 
-        0.4,
-        (caret-width: 1vw,
-        iterations: 1) 
-        )
+  margin: 0;
+  font-size: 6vw;
+  @include typed(
+    "I'm Haya",
+    0.4,
+    (
+      caret-width: 1vw,
+      iterations: 1,
+    )
+  );
 }
 
 hr {
-    width: 100%;
-    border-top: 1vw dotted var(--pink);
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
+  width: 100%;
+  border-top: 1vw dotted var(--pink);
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
 }
 
-h1, h2, h3, p {
-    font-family: "Silk Flower", monospace;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: var(--pink);
+h1,
+h2,
+h3,
+p {
+  font-family: "Silk Flower", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--pink);
 }
 
 .general-text {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    font-size: 1.5vw;
-    text-align: justify;
-    margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  text-align: justify;
+  margin: 0;
 }
 
 #header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    font-size: 3vw;
-    margin: 0;
-    animation-timeline: scroll(block root);
-    letter-spacing: normal;
-    margin-top: 1vh;
+  font-size: 3vw;
+  margin: 0;
+  animation-timeline: scroll(block root);
+  letter-spacing: normal;
+  margin-top: 1vh;
+}
+
+/* ALL PROJECTS SECTION */
+#all-projects {
+  margin-bottom: 1vh;
+  font-size: 6vw;
+  @include typed(
+    "All Projects",
+    0.4,
+    (
+      caret-width: 1vw,
+      iterations: 1,
+    )
+  );
 }
 
 .recent-projects {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+  width: 70vw;
 }
 
 .recent-projects div img {
-    max-width: 30vw;
-    border-radius: 1vw;
+  max-width: 30vw;
+  border-radius: 1vw;
 }
 
 .recent-projects div p {
-    font-size: 2vw;
-    margin-top: 0.5vh;
+  font-size: 2vw;
+  margin-top: 0.5vh;
 }
 
 .see-all {
-    margin-top: 2vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .see-all a {
-    color: var(--pink);
-
+  color: var(--pink);
 }
 
-/* PROJECTS PAGE */
-#all-projects {
-    font-size: 6vw;
-    @include typed(
-        "All Projects", 
-        0.4,
-        (caret-width: 1vw,
-        iterations: 1) 
-        )
+/* BLOG SUMMARY PAGE */
+#all-blogs {
+  margin-bottom: 1vh;
+  font-size: 6vw;
+  @include typed(
+    "Posts",
+    0.4,
+    (
+      caret-width: 1vw,
+      iterations: 1,
+    )
+  );
 }
 
-.project {
-    width: 100%;
-    margin-top: 3vh;
+.blog-post {
+  width: 100%;
+  margin-top: 3vh;
 }
 
-.project a {
-    font-family: "Silk Flower";
-    color: var(--pink);
-    font-size: 2vw;
+.blog-post a {
+  font-family: "Silk Flower";
+  color: var(--pink);
+  font-size: 2vw;
 }
 
-.project div {
-    display: flex;
-    flex-direction: row;
+.blog-post div {
+  display: flex;
+  flex-direction: row;
 }
 
-.project p {
-    font-size: 1.25vw;
-    width: 50%;
+.blog-post p {
+  font-size: 1.25vw;
+  width: 50%;
 }
 
-.project hr {
-    border-top: 0.5vw dotted var(--pink);
+.blog-post hr {
+  border-top: 0.5vw dotted var(--pink);
 }
 
-.project-date {
-    width: 50%;
-    text-align: right;
+.blog-post-date {
+  width: 50%;
+  text-align: right;
 }
 
 // SKILLS SECTION
 
 table {
-    width: 70vw;
-    margin-top: 3vh;
+  width: 70vw;
+  margin-top: 3vh;
 }
 
 td {
-    width: 17.5vw;
+  width: 17.5vw;
 }
 
 td img {
-    width:12vw;
-    border-radius: 1vw;
+  width: 12vw;
+  border-radius: 1vw;
 }
 
 .level {
-    font-size: 1vw;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    padding-left: 0.5vw;
-    border-radius: 1vw;
-    background-color: var(--pink);
-    color: var(--jacarta)
+  font-size: 1vw;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  padding-left: 0.5vw;
+  border-radius: 1vw;
+  background-color: var(--pink);
+  color: var(--jacarta);
 }
+
+/*
+to do for esponsiveness
+- make theme icon smaller
+- remove page margin
+- make text a bit bigger
+- make tables in a single or double column
+*/
