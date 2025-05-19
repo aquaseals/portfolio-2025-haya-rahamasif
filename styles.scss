@@ -310,11 +310,49 @@ table {
 
 td {
   width: 17.5vw;
+
 }
 
 td img {
-  width: 12vw;
+  width: 11vw;
   border-radius: 1vw;
+  padding: 2vh;
+  background-color: var(--light-pink);
+  display: flex;
+  align-items: center;
+}
+
+td p {
+  width: 13vw;
+}
+
+.b {
+    width: 16.6%;
+}
+
+.ib {
+    width: 33.3%;
+}
+
+.i {
+  width: 50%;
+}
+
+.a {
+  width: 66.6%;
+}
+
+.e {
+  width: 83.3%;
+}
+
+.level-container {
+  width: 12.5vw;
+  height: 1.15vw;
+  border-radius: 1vw;
+  border: 2px solid var(--pink);
+  position: relative;
+  margin-top: 1vh;
 }
 
 .level {
@@ -325,6 +363,9 @@ td img {
   border-radius: 1vw;
   background-color: var(--pink);
   color: var(--jacarta);
+  position: absolute;
+  top: 0;
+  margin: 0;
 }
 
 /*

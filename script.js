@@ -1,6 +1,6 @@
 let mode = 0;
-let jacarta = "rgb(58, 52, 91)"
-let pink = "rgb(209, 131, 169)"
+let jacarta = "rgb(58, 52, 91)";
+let pink = "rgb(209, 131, 169)";
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
@@ -78,21 +78,21 @@ function switchMode() {
     themeIcon.onerror = function () {
       themeIcon.src = "../assets/images/moon.png";
     };
-    mode = 1;
     let allBorders = document.getElementsByTagName("hr");
-      for (let i = 0; i < allBorders.length - 1; i++) {
-        allBorders[i].style.borderTopColor = pink;
-      }
+    for (let i = 0; i < allBorders.length; i++) {
+      allBorders[i].style.borderColor = jacarta;
+    }
+    mode = 1;
   } else if (mode == 1) {
     themeIcon.src = "./assets/images/sun.png";
     themeIcon.onerror = function () {
       themeIcon.src = "../assets/images/sun.png";
     };
-    mode = 0;
     let allBorders = document.getElementsByTagName("hr");
-      for (let i = 0; i < allBorders.length - 1; i++) {
-        allBorders[i].style.borderTopColor = jacarta;
-      }
+    for (let i = 0; i < allBorders.length; i++) {
+      allBorders[i].style.borderColor = pink;
+    }
+    mode = 0;
   }
 }
 
