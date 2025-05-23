@@ -97,3 +97,30 @@ function switchMode() {
 }
 
 document.getElementById("theme").addEventListener("click", switchMode);
+
+let cells = document.getElementsByTagName("td")
+for (let i=0;i<cells.length;i++) {
+  cells[i].addEventListener("mouseover", function(){
+    let singleCell = cells[i]
+    let levelChild = singleCell.children[2].children[0]
+      let classes = levelChild.classList
+      let proficiency = classes[1]
+      switch(proficiency) {
+        case "b" :
+          console.log("beginner")
+          break
+        case "ib" :
+          console.log("intermediate eginner")
+          break
+        case "i" :
+          console.log("intermediate")
+          break
+        case "e" :
+          console.log("expert")
+          break
+        case "a" :
+          console.log("advanced")
+          break
+      }
+  })
+}

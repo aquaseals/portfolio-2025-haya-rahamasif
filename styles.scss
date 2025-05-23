@@ -310,7 +310,14 @@ table {
 
 td {
   width: 17.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+tr {
+  display: flex;
+  margin-bottom: 2vh;
 }
 
 td img {
@@ -320,6 +327,7 @@ td img {
   background-color: var(--light-pink);
   display: flex;
   align-items: center;
+  box-shadow: 0 4px 8px 0 var(--pink), 0 6px 15px 0 var(--pink)
 }
 
 td p {
@@ -352,14 +360,11 @@ td p {
   border-radius: 1vw;
   border: 2px solid var(--pink);
   position: relative;
-  margin-top: 1vh;
+  margin-top: 2vh;
 }
 
 .level {
-  font-size: 1vw;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-  padding-left: 0.5vw;
+  height: 1.15vw;
   border-radius: 1vw;
   background-color: var(--pink);
   color: var(--jacarta);
