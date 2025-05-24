@@ -20,6 +20,7 @@ document.addEventListener("scroll", function () {
   blog = document.getElementById("blog");
   contact = document.getElementById("contact");
 
+  //checking pos of user compared to pos of other page sections
   if (
     userScrollPos >= aboutMe.getBoundingClientRect().top &&
     userScrollPos < projects.getBoundingClientRect().top
@@ -57,10 +58,21 @@ document.addEventListener("scroll", function () {
 function switchMode() {
   let allElements = document.getElementsByTagName("*");
   for (let i = 0; i < allElements.length; i++) {
-    color = window.getComputedStyle(allElements[i]).getPropertyValue("color");
+    color = window
+      .getComputedStyle(allElements[i])
+      .getPropertyValue("color");
     bgColor = window
       .getComputedStyle(allElements[i])
       .getPropertyValue("background-color");
+    borderColor = window
+      .getComputedStyle(allElements[i])
+      .getPropertyValue("border-color");
+    boxShadow = window
+      .getComputedStyle(allElements[i])
+      .getPropertyValue("box-shadow");
+    let shadowProperties = boxShadow.split(" ")
+    console.log(boxShadow)
+    let shadowColor = shadowProperties[0]+" "+shadowProperties[1]+" "+shadowProperties[2] //reconstructing color property
     if (color == pink) {
       allElements[i].style.color = jacarta;
     } else if (color == jacarta) {
@@ -71,6 +83,19 @@ function switchMode() {
     } else if (bgColor == jacarta) {
       allElements[i].style.backgroundColor = pink;
     }
+    if (borderColor == pink) {
+      allElements[i].style.borderColor = jacarta;
+    } else if (borderColor == jacarta) {
+      allElements[i].style.borderColor = pink;
+    }
+
+    if (shadowColor == pink) {
+      let shadow = shadowProperties
+      //allElements[i].style.boxShadow = 'jacarta';
+    } else if (shadowColor == jacarta) {
+      //allElements[i].style.boxShadow = pink;
+    }
+    
   }
   let themeIcon = document.getElementById("theme");
   if (mode == 0) {
@@ -102,25 +127,28 @@ let cells = document.getElementsByTagName("td")
 for (let i=0;i<cells.length;i++) {
   cells[i].addEventListener("mouseover", function(){
     let singleCell = cells[i]
-    let levelChild = singleCell.children[2].children[0]
+    let levelChild = singleCell.children[1].children[0]
+    singleCell.style.setProperty("--tooltip-opacity", 1)
       let classes = levelChild.classList
       let proficiency = classes[1]
+      let tooltipText = ""
       switch(proficiency) {
         case "b" :
-          console.log("beginner")
+          tooltipText = "Beginner"
           break
         case "ib" :
-          console.log("intermediate eginner")
+          tooltipText = "Intermediate Beginner"
           break
         case "i" :
-          console.log("intermediate")
+          tooltipText = "Intermediate"
           break
         case "e" :
-          console.log("expert")
+          tooltipText = "Expert"
           break
         case "a" :
-          console.log("advanced")
+          tooltipText = "Advanced"
           break
       }
+      singleCell.setAttribute("tooltip-text", tooltipText)
   })
 }
