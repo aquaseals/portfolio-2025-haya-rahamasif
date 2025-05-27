@@ -841,6 +841,14 @@ td p {
   transition-duration: 300ms;
 }
 
+footer svg path {
+  fill: var(--pink);
+}
+
+footer svg {
+  width: 5vw;
+}
+
 /*
 to do for esponsiveness
 - make theme icon smaller

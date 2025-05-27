@@ -58,6 +58,9 @@ document.addEventListener("scroll", function () {
 function switchMode() {
   let allElements = document.getElementsByTagName("*");
   for (let i = 0; i < allElements.length; i++) {
+    fill = window
+      .getComputedStyle(allElements[i])
+      .getPropertyValue("fill");
     color = window
       .getComputedStyle(allElements[i])
       .getPropertyValue("color");
@@ -87,6 +90,11 @@ function switchMode() {
       allElements[i].style.borderColor = jacarta;
     } else if (borderColor == jacarta) {
       allElements[i].style.borderColor = pink;
+    }
+    if (fill == pink) {
+      allElements[i].style.fill = jacarta;
+    } else if (fill == jacarta) {
+      allElements[i].style.fill = pink;
     }
 
     if (shadowColor == pink) {
