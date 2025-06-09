@@ -22,6 +22,12 @@
   }
 }
 
+@keyframes moveDownMore {
+  100% {
+    transform: translateY(calc(100vh - 51vh));
+  }
+}
+
 @keyframes spaceOut {
   100% {
     letter-spacing: 10px;
@@ -438,3 +444,69 @@ to do for esponsiveness
 - make text a bit bigger
 - make tables in a single or double column
 */
+
+@media (max-width: 700px) {
+  #theme-container {
+    margin-left: -2.5vw;
+  }
+
+  #theme {
+    width: 15vw;
+  }
+
+  .page {
+    max-width: 80vw;
+  }
+
+  .general-text {
+    font-size: 2.5vw;
+  }
+
+  h1 {
+    font-size: 2vh;
+  }
+
+  .image-and-text {
+    flex-direction: column;
+  }
+
+  .section {
+    margin-bottom: 2vh;
+  }
+
+  #hello {
+    width: 50vw;
+    animation: moveDownMore 7s ease-in-out;
+    animation-timeline: scroll(block root);
+    animation-range: 0vh 20vh;
+    animation-fill-mode: forwards;
+  }
+
+  #nav a {
+    font-size: 1.5vh;
+  }
+
+  .recent-projects {
+    flex-direction: column;
+  }
+
+  .recent-projects div img {
+  max-width: 50vw;
+  border-radius: 1vw;
+}
+
+.recent-projects div p {
+  font-size: 3vw;
+  margin-top: 0.5vh;
+  margin-bottom: 1vh;
+}
+
+  tr {
+    justify-content: space-between;
+    max-width: 80vw;
+  }
+
+  td {
+    width: 3.5vw;
+  }
+}
