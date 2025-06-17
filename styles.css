@@ -877,6 +877,11 @@ footer svg {
   margin-bottom: 2vh;
 }
 
+iframe {
+  width: 100%;
+  height: 50vh;
+}
+
 /*
 to do for esponsiveness
 - make theme icon smaller
