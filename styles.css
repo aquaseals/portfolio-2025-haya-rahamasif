@@ -54,6 +54,24 @@ i {
   z-index: 10000;
   position: fixed;
   margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icons {
+  width: 3vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#git {
+  margin-top: -2vh;
+}
+
+#linkedin {
+  margin-top: 3vh;
 }
 
 #theme {
@@ -147,7 +165,6 @@ a {
   width: 0vw;
   margin: auto;
   height: 1vh;
-  border-radius: 10px;
   background-color: var(--jacarta);
   max-width: 100vw;
 }
@@ -846,12 +863,18 @@ td p {
   transition-duration: 300ms;
 }
 
-footer svg path {
+footer svg path, .icons {
   fill: var(--pink);
 }
 
 footer svg {
-  width: 5vw;
+  width: 4vw;
+  margin-right: 3vw;
+}
+
+#contact p {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
 }
 
 /*
@@ -868,11 +891,30 @@ to do for esponsiveness
   #theme {
     width: 15vw;
   }
+
+.icons {
+  width: 3.5vw;
+}
+
+#git {
+  margin-top: 0;
+}
+
+#linkedin {
+  margin-top: 3vh;
+}
+
   .page {
     max-width: 80vw;
   }
   .general-text {
     font-size: 2.5vw;
+  }
+  .see-all {
+    font-size: 2.5vw;
+  }
+  .see-all i {
+    font-size: 1vw;
   }
   h1 {
     font-size: 2vh;
@@ -905,13 +947,18 @@ to do for esponsiveness
     margin-top: 0.5vh;
     margin-bottom: 1vh;
   }
+  table {
+    margin: auto;
+    margin-top: 2vh;
+  }
   tr {
     justify-content: space-between;
     max-width: 80vw;
   }
   td {
-    width: 3.5vw;
+    width: 3vw;
   }
+
 }
 
 /*# sourceMappingURL=styles.css.map */
