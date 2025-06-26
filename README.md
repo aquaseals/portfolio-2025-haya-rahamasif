@@ -16,4 +16,4 @@
 - Project gallery page
 
 ## Visit the Portfolio
-![Click me to visit!](https://portfolio-2025-livid-beta.vercel.app/)
+[Click me to visit!](https://portfolio-2025-livid-beta.vercel.app/)
