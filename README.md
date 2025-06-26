@@ -1,12 +1,19 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17999115)
 # Portfolio
 
-total time spent: ![](https://hackatime-badge.hackclub.com/U08PZBEU4C9/portfolio-2025-haya-rahamasif) ![](https://hackatime-badge.hackclub.com/U08PZBEU4C9/portfolio-2025)
+## Total time spent: ![](https://hackatime-badge.hackclub.com/U08PZBEU4C9/portfolio-2025-haya-rahamasif) ![](https://hackatime-badge.hackclub.com/U08PZBEU4C9/portfolio-2025)
 
-features:
-- hello scroll animation
-- light/dark mode
-- progress bar (who doesn't love a simple lil progress bar)
-- blog section
-- project gallery page
+## Why did I even make this?
+1. I need a site that showcases my projects so far, because I forget everything so this site helps keep track
+2. Share my achievements/progress with friends and future employers possibly..
+3. Good practice for HTML, CSS and JS skills
+4. I learned how to use Sass and create animations for this! It was pretty cool and simple
 
+## Features:
+- Hello scroll animation
+- Light/dark mode
+- Progress bar (who doesn't love a simple lil progress bar)
+- Blog section
+- Project gallery page
+
+## Visit the Portfolio
+![Click me to visit!](https://portfolio-2025-livid-beta.vercel.app/)
