@@ -17,3 +17,9 @@
 
 ## Visit the Portfolio
 [Click me to visit!](https://portfolio-2025-livid-beta.vercel.app/)
+
+## How can I host/run the website?
+1. Fork this repo
+2. Go to repo settings and set up a github page
+   OR
+3. Download the 'liver server' extension and open a live server on index.html
